@@ -6,8 +6,8 @@
 
 //-------------------------------------------
 
-let primo = prompt("inserisci il primo numero da 1 a 9");
-let secondo = prompt("inserisci il secondo numero 1 a 9");
+let primo = parseInt(prompt("inserisci il primo numero da 1 a 9"));
+let secondo = parseInt(prompt("inserisci il secondo numero 1 a 9"));
 let stampa = document.getElementById("box");
 let maggiore;
 let minore;
