@@ -10,7 +10,7 @@
 let serbatoio = [];
 const stampa = document.getElementById('box');
 
-for( i = 0; i < 6; i++){
+for(let i = 0; i < 6; i++){
 
   let numero = parseInt(prompt('Inserisci un numero'));
  
