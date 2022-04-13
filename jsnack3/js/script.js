@@ -9,9 +9,25 @@
 const stampa = document.getElementById("box"); 
 let totale = 0;
 
-for(let i = 0; i < 5; i++){
+// 1.soluzione con il for
+
+/*for(let i = 0; i < 5; i++){
   let numero = parseInt(prompt('inserisci un numero'));
   totale = numero + totale;
 
   stampa.innerHTML=`la somma è ${totale}`
+}*/
+
+
+// 2. soluzione con il while.
+
+let i = 0;
+while(i < 5){
+  let numero= parseInt(prompt('inserisci un numero'));
+  totale = numero + totale;
+  i++;
+
 }
+
+stampa.innerHTML=` la somma è ${totale}`;
+
