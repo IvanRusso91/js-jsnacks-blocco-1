@@ -10,9 +10,7 @@ let tot = 0;
 
 
 for(let i = 1; i <= 10; i++){
-
   tot = i + tot;
-
 }
 
 let media = tot / 10;
