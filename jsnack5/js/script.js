@@ -10,14 +10,20 @@
 let serbatoio = [];
 const stampa = document.getElementById('box');
 
-for(let i = 0; i < 6; i++){
+const limit = 6
+i = 0;
 
-  let numero = parseInt(prompt('Inserisci un numero'));
- 
+while(i < limit){
+  let numero;
+  while(isNaN(numero)){
+    let proptMessage = `inserisci per ${limit - i} volte un numero`;
+    if (i === limit - 1) proptMessage = `inserisci l'ultimo numero`;
+    numero = parseInt(prompt(proptMessage));
+  }
+  i++;
   if(numero % 2){
     serbatoio.push(numero);
-  }
+  } 
+}  
 
-} 
-
-stampa.innerHTML = `Ci sono questi numeri dispari ${serbatoio}`;
+ stampa.innerHTML = `Ci sono questi numeri dispari ${serbatoio}`;

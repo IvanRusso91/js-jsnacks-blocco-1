@@ -6,11 +6,35 @@
 
 //----------------------------------------------------
 
-let primo = prompt("inserisci una parola");
-let secondo = prompt("inserisci una parola");
+
 let stampa = document.getElementById("box");
-let maggiore;
-let minore;
+
+// controllo
+let arrFirstWord = [];
+let arrSecondWord =[];
+
+while(arrFirstWord.length > 1 || arrFirstWord.length == 0){
+  primo = prompt("inserisci una parola").trim();
+
+  if(primo.length != 0){
+    arrFirstWord = primo.split(" ");
+  }
+  
+  if(arrFirstWord.length > 1){
+  alert('inserisci solo una parola');
+  }
+}
+ 
+while(arrSecondWord.length > 1 || arrSecondWord.length == 0){
+  secondo =prompt ("inserisci una parola").trim();
+
+  if(secondo.length !=0){
+    arrSecondWord = secondo.split(" ");
+  }
+  if(arrSecondWord.length > 1){
+    alert("inserisci solo una parola");
+  }
+}
 
 if(primo.length > secondo.length){
   stampa.innerHTML= `la parola più corta è ${secondo} e quella più lunga è ${primo}`;
@@ -19,6 +43,6 @@ if(primo.length > secondo.length){
   stampa.innerHTML = `le parole sono di lunghezza uguale`
 
 }else{
-    stampa.innerHTML= `la parola più corta è ${primo} e quella più lunga è ${secondo}`;
+     stampa.innerHTML= `la parola più corta è ${primo} e quella più lunga è ${secondo}`;
 }
 

@@ -19,15 +19,23 @@ let totale = 0;
 }*/
 
 
-// 2. soluzione con il while.
+// 2. soluzione con il while +.
+const limit = 7;
+let sumNumWhile=0;
+let counter = 0;
 
-let i = 0;
-while(i < 5){
-  let numero= parseInt(prompt('inserisci un numero'));
-  totale = numero + totale;
-  i++;
+while(counter<limit){
+  let numInsert;
+  while(isNaN(numInsert)){
+    let proptMessage = `inserisci per ${limit - counter} volte un numero`;
+    if (counter===limit - 1) proptMessage = `inserisci l'ultimo numero`;
+    numInsert = parseInt(prompt(proptMessage));
+  }
 
+  counter++;
+  sumNumWhile+= numInsert;
+  console.log(sumNumWhile);
 }
 
-stampa.innerHTML=` la somma è ${totale}`;
+
 
